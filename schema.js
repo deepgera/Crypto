@@ -1,6 +1,6 @@
 const { default: mongoose } = require("mongoose")
 
-mongoose.connect('mongodb://localhost:27017/nodejspractice').then(()=>{
+mongoose.connect('mongodb+srv://deepak:deepak123@cluster0.rdcdm.mongodb.net/crypto?retryWrites=true&w=majority').then(()=>{
     console.log("connnected")
 }).catch( (err)=> {
     console.log(err)
