@@ -14,6 +14,15 @@ const RateSchema= new mongoose.Schema({
     Price:String,
 })
  
+const TransactionSchema= new mongoose.Schema({
+    Transactionto:String,
+    Transactionfrom:String,
+    value:String,
+})
 
+const ResultSchema= new mongoose.Schema({
+    Balance:Number,
+    Price:Number
+})
 
-module.exports=mongoose.model('rate',RateSchema)
+module.exports={Rate:mongoose.model('rate',RateSchema),Result:mongoose.model('Balance',ResultSchema)}

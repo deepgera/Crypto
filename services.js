@@ -1,9 +1,17 @@
-const Model = require('./schema');
+const { Rate,Result} =require('./schema');
 
-async function AddRate(body){
-    const res=await Model.insertMany(body);
-    console.log(res);
-    return res;
+
+async function AddRate(body) {
+  const res = await Rate.insertMany(body);
+  console.log(res);
+  return res;
 }
 
-module.exports = {AddRate}
+async function AddResult(body) {
+  const res = await Result.insertMany(body);
+  console.log(res);
+  return res;
+}
+
+
+module.exports={ AddRate, AddResult };
